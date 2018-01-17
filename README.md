@@ -35,6 +35,10 @@ This repository contains all files necessary to reproduce the results of my pape
 ## Classification Algorithm: 
 [main.py](https://github.com/Saurav0074/Reference-Scope-Identification-for-Citances-Using-CNN/blob/master/main.py) contains the 1-D CNN implementation along with GBC and ABC classifiers for training and testing the above generated feature vectors.
 
+The original presentation can be found [here](https://www.slideshare.net/SauravJha28/reference-scope-identification-of-citances-using-convolutional-neural-network).
+
+In case of queries, feel free to reach out at mail@sauravjha.com.np. 
+
 # References
 - S. Jha, A. Chaurasia, A. Sudhakar, and A. K. Singh, “Reference scope identification for citances using
 convolutional neural networks,” in Proceedings of the 14th International Conference on Natural Language
