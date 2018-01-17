@@ -6,6 +6,8 @@ This repository contains all files necessary to reproduce the results of our pap
 
 **Stopwords removal**: [remove_stopwords.py](https://github.com/Saurav0074/Reference-Scope-Identification-for-Citances-Using-CNN/blob/master/remove_stopwords.py)
 
+[csv_con](https://github.com/Saurav0074/Reference-Scope-Identification-for-Citances-Using-CNN/blob/master/csv_convert.py) writes the <RP, CP> pair into tab-separated csv cells along with assigning corresponding binary labels (1- true, 0 - false). 
+
 ## Feature Extraction Modules:
 
 1. **Lexical Features**: *All the similarity measures require a pair of texts as input and work by averaging over all the words of the sentence.* 
