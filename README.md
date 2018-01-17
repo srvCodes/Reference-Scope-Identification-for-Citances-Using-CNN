@@ -1,6 +1,6 @@
 # Reference-Scope-Identification-for-Citances-Using-CNN
 
-This repository contains all files necessary to reproduce the results of my paper entitled Reference Scope Identification for Citances Using Convolutional Neural Network<sup>1</sup>.
+This repository contains all files necessary to reproduce the results of our paper "Reference Scope Identification for Citances Using Convolutional Neural Network<sup>1</sup>".
 ## Reference-Citance Pair Extraction:
 [generate_test.py](https://github.com/Saurav0074/Reference-Scope-Identification-for-Citances-Using-CNN/blob/master/generate_test.py) along with test*.py are meant for data set parsing.
 
