@@ -1,11 +1,15 @@
 # Reference-Scope-Identification-for-Citances-Using-CNN
 
 This repository contains all files necessary to reproduce the results of my paper entitled Reference Scope Identification for Citances Using Convolutional Neural Network<sup>1</sup>.
+## Reference-Citance Pair Extraction:
+[generate_test.py](https://github.com/Saurav0074/Reference-Scope-Identification-for-Citances-Using-CNN/blob/master/generate_test.py) along with test*.py are meant for data set parsing.
+
+**Stopwords removal**: [remove_stopwords.py](https://github.com/Saurav0074/Reference-Scope-Identification-for-Citances-Using-CNN/blob/master/remove_stopwords.py)
 
 ## Feature Extraction Modules:
 
-1. Lexical Features: *All the similarity measures require a pair of texts as input and work by averaging over all the words of the sentence.* 
-- Word Overlap: 
+1. **Lexical Features**: *All the similarity measures require a pair of texts as input and work by averaging over all the words of the sentence.* 
+- Word Overlap Measures: 
   - [dice_coeff.py](https://github.com/Saurav0074/Reference-Scope-Identification-for-Citances-Using-CNN/blob/master/dice_coeff.py) measures the Dice Similarity.  
   - [cosine.py](https://github.com/Saurav0074/Reference-Scope-Identification-for-Citances-Using-CNN/blob/master/cosine.py) measures the Cosine similarity.
   - [jaccard_sim.py](https://github.com/Saurav0074/Reference-Scope-Identification-for-Citances-Using-CNN/blob/master/jaccard_sim.py) measures the Jaccard similarity.
@@ -19,11 +23,20 @@ This repository contains all files necessary to reproduce the results of my pape
 - Named entity overlap: [ner_overlap.py](https://github.com/Saurav0074/Reference-Scope-Identification-for-Citances-Using-CNN/blob/master/ner_overlap.py)
 
 
-2. Knowledge-based Feature: [wordnet_similariy.py](https://github.com/Saurav0074/Reference-Scope-Identification-for-Citances-Using-CNN/blob/master/wordnet_similarity.py) measures the best semantic similarity score between words in the citance and the reference sentence out of all the sets of cognitive synonyms (synsets) present in the WordNet.
+2. **Knowledge-based Feature**: [wordnet_similariy.py](https://github.com/Saurav0074/Reference-Scope-Identification-for-Citances-Using-CNN/blob/master/wordnet_similarity.py) measures the best semantic similarity score between words in the citance and the reference sentence out of all the sets of cognitive synonyms (synsets) present in the WordNet.
 
-3. Corpus-based Feature: [word2vec_similarity.py](https://github.com/Saurav0074/Reference-Scope-Identification-for-Citances-Using-CNN/blob/master/word2vec_similarity.py), as the name denotes.
+3. **Corpus-based Feature**: [word2vec_similarity.py](https://github.com/Saurav0074/Reference-Scope-Identification-for-Citances-Using-CNN/blob/master/word2vec_similarity.py), as the name denotes.
 
-4. Surface Features: 
+4. **Surface Features**: 
 - [surface_features.py](https://github.com/Saurav0074/Reference-Scope-Identification-for-Citances-Using-CNN/blob/master/surface_features.py)
 - [sentiWordNet.py](https://github.com/Saurav0074/Reference-Scope-Identification-for-Citances-Using-CNN/blob/master/sentiWordNet.py) measures the overall positive and negative sentiment score of the reference sentence averaged over all the words, based on the SentiWordNet 3.0 lexical resource.
 - [yuleK.py](https://github.com/Saurav0074/Reference-Scope-Identification-for-Citances-Using-CNN/blob/master/yuleK.py) measures lexical richness of the reference sentence based on Yule’s K index.
+
+## Classification Algorithm: 
+[main.py](https://github.com/Saurav0074/Reference-Scope-Identification-for-Citances-Using-CNN/blob/master/main.py) contains the 1-D CNN implementation along with GBC and ABC classifiers for training and testing the above generated feature vectors.
+
+# References
+- S. Jha, A. Chaurasia, A. Sudhakar, and A. K. Singh, “Reference scope identification for citances using
+convolutional neural networks,” in Proceedings of the 14th International Conference on Natural Language
+Processing (ICON-2017). Kolkata, India: NLP Association of India, December 2017, pp. 23–32. [Online].
+Available: http://www.aclweb.org/anthology/W/W17/W17-7504
